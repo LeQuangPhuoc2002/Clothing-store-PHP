@@ -1,0 +1,15 @@
+User ID: , Name: , Email: , Phonenumber: 
+Address: ádsadsad
+=================================================================
+Product name: Áo Khoác Denim Nam x 3
+Price per product: $1599
+Total Price: $4797
+Product name: Giày Sneakers Nữ Họa Tiết x 3
+Price per product: $899
+Total Price: $2697
+Product name: Quần Jogger Nam Nỉ x 3
+Price per product: $799
+Total Price: $2397
+=================================================================
+Total Price: $9891
+Final Total: $9901
