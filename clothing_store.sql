@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th12 28, 2023 lúc 03:08 AM
+-- Thời gian đã tạo: Th3 16, 2024 lúc 08:47 AM
 -- Phiên bản máy phục vụ: 10.4.28-MariaDB
 -- Phiên bản PHP: 8.1.17
 
@@ -106,7 +106,8 @@ INSERT INTO `cart_item` (`cart_item_id`, `cart_id`, `product_id`, `quantity`) VA
 (519, 16, 70, 1),
 (520, 16, 69, 1),
 (543, 1, 5, 3),
-(555, 1, 103, 3);
+(555, 1, 103, 3),
+(566, 1, 44, 6);
 
 -- --------------------------------------------------------
 
@@ -164,7 +165,8 @@ INSERT INTO `comments` (`comment_id`, `product_id`, `user_id`, `comment_text`, `
 (12, 70, 23, 'sadasd', '2023-12-24 12:33:42'),
 (13, 103, 25, 'san phẩm này tuyệt quá', '2023-12-25 15:54:31'),
 (14, 68, 23, 'sản phẩm này rát tuyệt', '2023-12-25 15:55:43'),
-(15, 68, 27, 'Sản phẩm này tmaj được ', '2023-12-25 16:06:20');
+(15, 68, 27, 'Sản phẩm này tmaj được ', '2023-12-25 16:06:20'),
+(16, 115, 23, 'sản phẩm này tuiyeejt', '2023-12-28 06:40:19');
 
 -- --------------------------------------------------------
 
@@ -193,7 +195,9 @@ INSERT INTO `order` (`order_id`, `user_id`, `status_id`, `order_date`, `order_ad
 (16, 2, 3, '2023-12-25 16:24:54', '35 nguyễn huệ', 'image10.webp'),
 (17, 23, 3, '2023-12-25 16:56:26', '1233 ông ích khiêm', 'shipper-giao-hang-nhanh_e081eeb73c004ecfa638eb4b90a20cd5_grande.webp'),
 (18, 27, 1, '2023-12-25 17:07:38', '1222 nguyesxn trường tộ', ''),
-(19, 21, 3, '2023-12-25 17:11:05', '23i123jijsadasd', 'meo-ship-hang-an-toan-cho-cac-shop-online-707x400.jpg');
+(19, 21, 3, '2023-12-25 17:11:05', '23i123jijsadasd', 'meo-ship-hang-an-toan-cho-cac-shop-online-707x400.jpg'),
+(20, 23, 3, '2023-12-28 07:41:18', '31', 'ghn-1-4862.jpg'),
+(21, 23, 1, '2024-01-03 09:20:09', '1 nguyễn trãi', '');
 
 -- --------------------------------------------------------
 
@@ -227,7 +231,11 @@ INSERT INTO `order_detail` (`order_detail_id`, `order_id`, `product_id`, `order_
 (13, 17, 103, 3),
 (14, 18, 67, 3),
 (15, 19, 15, 3),
-(16, 19, 4, 3);
+(16, 19, 4, 3),
+(17, 20, 115, 1),
+(18, 20, 103, 1),
+(19, 21, 2, 4),
+(20, 21, 70, 1);
 
 -- --------------------------------------------------------
 
@@ -324,7 +332,8 @@ INSERT INTO `products` (`product_id`, `product_name`, `price`, `category_id`, `i
 (70, 'Áo Khoác Denim Nam', 1599, 4, 'image70_1.png', 'image70_2.png', 'image70_3.png', 'Áo khoác denim nam với chất liệu denim bền bỉ và thời trang. Thiết kế dáng dài, phù hợp cho mùa thu đông. Kết hợp cùng áo thun và quần jeans, tạo nên phong cách nam tính và cá tính.', 60),
 (101, 'sadsad', 123, 2, 'image60.jpg', 'image21.webp', 'image13.webp', '0', 123),
 (103, 'sad', 123, 1, 'image5.webp', 'image6.webp', 'image2.webp', '0', 123),
-(115, 'Áo nam xám', 10, 1, 'image3.webp', 'image5.webp', 'image2.webp', '0', 3);
+(115, 'Áo nam xám', 10, 1, 'image3.webp', 'image5.webp', 'image2.webp', '0', 3),
+(116, 'thanh', 123, 3, 'image20.webp', 'image11.webp', 'ghn-1-4862.jpg', '0', 2);
 
 -- --------------------------------------------------------
 
@@ -484,7 +493,7 @@ ALTER TABLE `cart`
 -- AUTO_INCREMENT cho bảng `cart_item`
 --
 ALTER TABLE `cart_item`
-  MODIFY `cart_item_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=561;
+  MODIFY `cart_item_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=567;
 
 --
 -- AUTO_INCREMENT cho bảng `categories`
@@ -496,25 +505,25 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT cho bảng `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT cho bảng `order`
 --
 ALTER TABLE `order`
-  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT cho bảng `order_detail`
 --
 ALTER TABLE `order_detail`
-  MODIFY `order_detail_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `order_detail_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT cho bảng `products`
 --
 ALTER TABLE `products`
-  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=116;
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=117;
 
 --
 -- AUTO_INCREMENT cho bảng `users`
