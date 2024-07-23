@@ -3,7 +3,7 @@ This PHP-based web project redefines the online shopping experience, focusing on
 
 ![Alt text](https://raw.githubusercontent.com/LeQuangPhuoc2002/Clothing-store-PHP/main/Screenshot%202023-12-28%20094519.png)
 
-URL REVIEW WEB: https://www.youtube.com/watch?v=Iwpa1kketS4&t=1s
+URL REVIEW WEB: https://www.youtube.com/watch?v=xZIQeBgJoU4
 
 User:
 - Secure user authentication with encrypted password storage.
